@@ -1,13 +1,27 @@
 package ru.netology.Radio.services;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
+
 public class Radio {
+
     public int minVolume = 0;
     public int maxVolume = 100;
     public int minStation = 0;
     public int maxStation = 9;
     public int currentVolume = 0;
     public int currentStation = minStation;
+    public int sizeStation = 10;
 
+
+}
+    /*
     public Radio() {
 
     }
@@ -83,6 +97,8 @@ public class Radio {
             currentStation = currentStation - 1;
         }
     }
-}
+
+     */
+
 
 
