@@ -20,15 +20,31 @@ public class Radio {
     public int sizeStation = 10;
 
 
-}
-    /*
-    public Radio() {
+//    public Radio() {
+//        this.currentStation = this.minStation;
+//        this.sizeStation = 10;
+//    }
 
-    }
+//    public Radio(int minVolume, int maxVolume, int minStation, int maxStation, int currentVolume, int currentStation, int sizeStation) {
+//        this.currentStation = this.minStation;
+//        this.sizeStation = 10;
+//        this.minVolume = minVolume;
+//        this.maxVolume = maxVolume;
+//        this.minStation = minStation;
+//        this.maxStation = maxStation;
+//        this.currentVolume = currentVolume;
+//        this.currentStation = currentStation;
+//        this.sizeStation = sizeStation;
+//    }
 
-    public Radio(int size) {
-        maxStation = minStation + size;
-    }
+
+//    public Radio() {
+//
+//    }
+
+//    public Radio(int size) {
+//        maxStation = minStation + size;
+//    }
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -97,8 +113,8 @@ public class Radio {
             currentStation = currentStation - 1;
         }
     }
+}
 
-     */
 
 
 

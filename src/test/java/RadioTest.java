@@ -5,7 +5,6 @@ import ru.netology.Radio.services.Radio;
 public class RadioTest {
 
 
-
     // Volume Tests
 
     @Test
@@ -39,42 +38,44 @@ public class RadioTest {
 
         Assertions.assertEquals(100, Volume.getCurrentVolume());
     }
+
     @Test
-    public void shouldNotSetVolumeDownThanMin(){
+    public void shouldNotSetVolumeDownThanMin() {
         Radio Volume = new Radio();
         Volume.setCurrentVolume(-24);
-        Assertions.assertEquals(0,Volume.getCurrentVolume());
+        Assertions.assertEquals(0, Volume.getCurrentVolume());
     }
 
     @Test
-    public void shouldIncreaaseVolume(){
-        Radio Volume =new Radio();
+    public void shouldIncreaaseVolume() {
+        Radio Volume = new Radio();
         Volume.increaseVolume();
-        Assertions.assertEquals(1,Volume.getCurrentVolume());
+        Assertions.assertEquals(1, Volume.getCurrentVolume());
     }
 
     @Test
-    public void shouldDecreaseVolume(){
+    public void shouldDecreaseVolume() {
         Radio Volume = new Radio();
         Volume.setCurrentVolume(30);
         Volume.decreaseVolume();
-        Assertions.assertEquals(29,Volume.getCurrentVolume());
+        Assertions.assertEquals(29, Volume.getCurrentVolume());
     }
 
     @Test
     public void shouldSetNextStationInBoundarySituation() { // Проверка переключения на следеющую станцию + проверка верхних граничных значений + проверка принудительной установки станции
-        Radio Station = new Radio(9);
+        Radio Station = new Radio();
         Station.setCurrentStation(9);
         Station.nextRadioStation();
 
         Assertions.assertEquals(0, Station.getCurrentStation());
     }
+
     @Test
-    public void shouldSetNextStationInOrdinarySituation(){
+    public void shouldSetNextStationInOrdinarySituation() {
         Radio Station = new Radio();
         Station.setCurrentStation(4);
         Station.nextRadioStation();
-        Assertions.assertEquals(5,Station.getCurrentStation());
+        Assertions.assertEquals(5, Station.getCurrentStation());
     }
 
     @Test
@@ -120,5 +121,5 @@ public class RadioTest {
         Station.setCurrentStation(90);
         Assertions.assertEquals(0, Station.getCurrentStation());
     }
-*/
+
 }
